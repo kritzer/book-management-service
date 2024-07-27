@@ -19,13 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 import static com.example.demo.types.ErrorResponseEnum.BOOK_ID_NOT_FOUND;
-import static com.example.demo.types.ErrorResponseEnum.UPDATE_BOOK_BAD_REQUEST;
 import static com.example.demo.util.Protocol.BOOKS_API;
 import static com.example.demo.util.Protocol.ID_PATH_VARIABLE;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping(BOOKS_API)
