@@ -79,7 +79,7 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(NullPointerException.class)
     @ResponseBody
-    public ResponseEntity<?> defaultExceptionHandler(Exception ex) {
+    public ResponseEntity<?> nullPointerExceptionHandler(Exception ex) {
         logger.catching(ex);
         List<CentralizedError> errorList = List.of(new CentralizedError(HttpStatus.INTERNAL_SERVER_ERROR.toString(), ex.getMessage()));
         var response = new CentralizedResponse<>(null, errorList);
