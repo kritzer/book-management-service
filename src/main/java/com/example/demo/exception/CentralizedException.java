@@ -61,8 +61,7 @@ public class CentralizedException extends Exception {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CentralizedException)) return false;
-        CentralizedException that = (CentralizedException) o;
+        if (!(o instanceof CentralizedException that)) return false;
         return Objects.equals(code, that.code) &&
                 httpStatus == that.httpStatus &&
                 Objects.equals(errors, that.errors);
